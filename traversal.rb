@@ -33,7 +33,7 @@ module Traversal
         node = queue.shift
         queue.push(node.left) unless node.left == nil
         queue.push(node.right) unless node.right == nil
-	puts node.val
+        puts node.val
       end
     end
   end

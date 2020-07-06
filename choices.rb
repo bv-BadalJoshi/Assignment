@@ -9,7 +9,5 @@ module Choices
   SEARCH_ELEMENT = 8
   REMOVE_ELEMENT = 9
   PATH = 10
-  OPEN_FILE = 11  
-
-         
+  OPEN_FILE = 11           
 end
