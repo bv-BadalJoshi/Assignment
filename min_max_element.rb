@@ -1,5 +1,5 @@
 require_relative "tree"
-# Find Minimum and Maximum Element
+
 module MinMax
 	def MinMax.largest(root)
 		if !root

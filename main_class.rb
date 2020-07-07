@@ -5,7 +5,7 @@ require_relative "read_write"
 require_relative "traversal"
 require_relative "utilities"
 require_relative "choices"
-# for taking user input for different cases
+
 class Driver
 	def start 
 		root = nil
@@ -28,13 +28,13 @@ class Driver
 				MinMax.smallest(root)
 			when Operation::ADD_ELEMENT
 				val = gets.chomp.to_i
-				root =  Crud.add_element(val,root)
+				root =  Crud.add_element(val, root)
 			when Operation::SEARCH_ELEMENT
 				val = gets.chomp.to_i
-				puts Crud.search_element(val,root)
+				puts Crud.search_element(val, root)
 			when Operation::REMOVE_ELEMENT
 				val = gets.chomp.to_i
-				root = Crud.remove_element(val,root)
+				root = Crud.remove_element(val, root)
 			when Operation::PATH
 				Traversal.find(root)
 			when Operation::OPEN_FILE

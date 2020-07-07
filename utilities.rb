@@ -41,11 +41,11 @@ module Utilities
 		q = [root]
 		for i in 1...arr.size()
 			temp_node = arr[i] == "nil" ? nil : Tree.new(arr[i].to_i)
-			q.push(temp_node) if arr[i]!="nil"
+			q.push(temp_node) if arr[i] != "nil"
 			if left_exists == 1
 				ptr = q.shift
 				ptr.left = temp_node
-				left_exists=0
+				left_exists = 0
 			else
 				ptr.right = temp_node
 				left_exists = 1
@@ -66,7 +66,7 @@ module Utilities
 		return root.left
 	end
 
-	def Utilities.find_all_paths(root, paths, temporary_path="")
+	def Utilities.find_all_paths(root, paths, temporary_path = "")
 		return nil if root == nil
 		paths.push(temporary_path + root.val.to_s) if !root.left && !root.right
 		temporary_path = temporary_path + root.val.to_s + " ";
