@@ -1,7 +1,7 @@
 require_relative "tree"
 require_relative "utilities"
 
-#Performs Traversals
+
 module Traversal
 	def Traversal.preorder(root)
 		return nil if root.nil?

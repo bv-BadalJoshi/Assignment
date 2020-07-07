@@ -1,13 +1,13 @@
 require_relative "tree"
 require_relative "utilities"
-#For handling add, remove and search case
+
 module Crud
 	def Crud.add_element(value,root)
 		return Tree.new(value) if root.nil?
 		root_node = root
 		previous_node = nil
 		while root
-			return nil if root.val==value
+			return nil if root.val == value
 			previous_node = root
 			if root.val > value
 				root = root.left
@@ -23,9 +23,9 @@ module Crud
 		return root_node 
 	end
 
-	def Crud.search_element(value,root)
+	def Crud.search_element(value, root)
 		while root
-			return 1 if root.val==value
+			return 1 if root.val == value
 			if value > root.val
 				root = root.right
 			else
@@ -36,7 +36,7 @@ module Crud
 	end
 
 	def Crud.remove_element(value, root)
-		return nil if root==nil
+		return nil if root == nil
 		if root.val == value
 			return Utilities.rearrange_tree(root)
 		end
